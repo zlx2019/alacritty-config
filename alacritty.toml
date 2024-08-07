@@ -1,0 +1,86 @@
+# alacritty 配置文件
+
+# 导入其他配置文件
+import = [
+    "~/.config/alacritty/themes/catppuccin-mocha.toml"
+]
+
+
+# 启动配置热更新
+live_config_reload=true
+
+# 启动工作目录
+# working_directory="C:/Users/Zero"
+
+# 使用的 Shell
+[shell]
+program="nu"
+args = ["-l"]
+
+
+################## 窗口相关配置################
+[window]
+title = "Alacritty"     # 标题
+dynamic_title=true      # 动态修改标题
+decorations="Full"      # 标题栏装饰
+opacity=0.9            # 背景透明度
+decorations_theme_variant="Dark"
+
+# 启动窗口大小
+[window.dimensions]
+columns=120
+lines=30
+
+# 启动窗口位置
+[window.position]
+x=600
+y=300
+
+
+# 滚动配置
+[scrolling]
+history=10000
+multiplier=3
+
+################ 字体配置 #######################
+[font]
+size = 12
+# 字符边距
+[font.offset]
+x=0
+y=0
+
+# 正常字体
+[font.normal]
+family="JetBrainsMono Nerd Font"
+# style = "Regular"
+style = "Bold"
+# 粗体
+[font.bold]
+style = "Bold"
+# 斜体
+[font.italic]
+style = "Italic"
+# 粗体 && 斜体
+[font.bold_italic]
+style = "Bold Italic"
+
+
+################ SELECTION ######################
+[selection]
+save_to_clipboard=true # 选中文本后自动复制到剪切板
+
+
+
+################ 光标配置 ######################
+[cursor]
+[cursor.style]
+shape="Underline"
+
+
+################ 快捷键绑定 ####################
+[keyboard]
+bindings=[
+    { key="V", mods="Control", action="Paste" },
+    { key="C", mods="Control", action="Copy" }
+]
